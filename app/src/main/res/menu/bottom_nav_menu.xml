@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/coinFragmentMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/coins_selector"
+        android:title="Coins" />
+    <item
+        android:id="@+id/highCoinsFragmentMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/high_coins_selector"
+        android:title="High Coins" />
+    <item
+        android:id="@+id/referFragmentMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/refer_selector"
+        android:title="Refer" />
+    <item
+        android:id="@+id/redeemFragmentMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/redeem_selector"
+        android:title="Redeem" />
+    <item
+        android:id="@+id/moreFragmentMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/more_selector"
+        android:title="More" />
+</menu>

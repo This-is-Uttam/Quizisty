@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeFrag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:context=".Activities.MainActivity">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/appLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            app:srcCompat="@drawable/app_icon" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/diamondTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/rewards_drawable"
+                        android:drawableLeft="@drawable/diamond"
+                        android:drawablePadding="8dp"
+                        android:ellipsize="end"
+                        android:maxWidth="100dp"
+                        android:padding="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/coinTxt"
+                        app:layout_constraintEnd_toStartOf="@+id/coinTxt"
+                        app:layout_constraintTop_toTopOf="@+id/coinTxt" />
+
+                    <TextView
+                        android:id="@+id/coinTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/strore_curved_bg"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/coins_14dp"
+                        android:drawablePadding="8dp"
+                        android:ellipsize="end"
+                        android:maxWidth="150dp"
+                        android:padding="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/appLogo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/appLogo"
+                        app:layout_constraintVertical_bias="0.428" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/alatsi_regular"
+                        android:text="Reward Rover"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="#1F9F91"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/appLogo"
+                        app:layout_constraintStart_toEndOf="@+id/appLogo"
+                        app:layout_constraintTop_toTopOf="@+id/appLogo" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:fillViewport="true"
+                    android:scrollbars="none"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/vp_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!--                <RelativeLayout-->
+                            <!--                    android:layout_width="wrap_content"-->
+                            <!--                    android:layout_height="match_parent"-->
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/voucherCard"
+                                android:layout_width="0dp"
+                                android:layout_height="160dp"
+                                android:layout_margin="16dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:visibility="gone"
+                                app:cardCornerRadius="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/playTimeCard">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/bg_gradient_vou">
+
+                                    <ImageView
+                                        android:id="@+id/imageView6"
+                                        android:layout_width="140dp"
+                                        android:layout_height="100dp"
+                                        android:layout_marginBottom="8dp"
+                                        app:layout_constraintBottom_toTopOf="@+id/vouDesc"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                                        app:layout_constraintTop_toTopOf="@+id/textView17"
+                                        app:srcCompat="@drawable/voucher_illus" />
+
+                                    <TextView
+                                        android:id="@+id/textView15"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="16dp"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:includeFontPadding="false"
+                                        android:text="Win Vouchers"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                        android:textColor="@android:color/black"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                                    <TextView
+                                        android:id="@+id/textView17"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="24dp"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:text="Book Slots,"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="24sp"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView15"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/vouDesc"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:text="Book your slot and get a chance to win vouchers of popular brands like Amazon, Flipkart and  more."
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView15"
+                                        app:layout_constraintVertical_bias="0.548" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/vouLlayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:gravity="center"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/playTimeCard">
+
+                                <TextView
+                                    android:id="@+id/vouHead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vouchers"
+                                    android:textSize="20dp"
+                                    android:fontFamily="@font/alatsi_regular"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_margin="16dp"/>
+
+                                <TextView
+                                    android:id="@+id/viewAllVoucher"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/selected_round_corner_bg"
+                                    android:clickable="true"
+                                    android:drawableRight="@drawable/right_arrow"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="View all"
+                                    android:textColor="@color/primaryColor"
+                                    android:textSize="12sp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/voucherTxt"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/vouHead" />
+
+                                <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                                    android:id="@+id/voucherRv2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/vouHead"
+                                    app:layout_constraintVertical_bias="0.5"
+                                    app:shimmer_demo_angle="20"
+                                    app:shimmer_demo_child_count="5"
+                                    app:shimmer_demo_layout="@layout/voucher_main_rv_item_2_shimmer"
+                                    app:shimmer_demo_layout_manager_type="linear_horizontal" />
+
+                                <TextView
+                                    android:id="@+id/vouMessage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Vouchers are empty!"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.5" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/bannerContainer"
+                                android:layout_width="0dp"
+                                android:layout_height="150sp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/pubCard"
+                                android:layout_width="0dp"
+                                android:layout_height="80dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                app:cardCornerRadius="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bannerContainer">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/md_theme_primary">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cardView2"
+                                        android:layout_width="38dp"
+                                        android:layout_height="38dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="8dp"
+                                        app:cardCornerRadius="8dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imageView9"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/pubscale" />
+                                    </androidx.cardview.widget.CardView>
+
+
+                                    <TextView
+                                        android:id="@+id/textView5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="16dp"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:text="Pubscale Offerwall"
+                                        android:textColor="@color/md_theme_onPrimary"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView74"
+                                        app:layout_constraintStart_toEndOf="@+id/cardView2"
+                                        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+                                    <TextView
+                                        android:id="@+id/textView6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:alpha="0.7"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:singleLine="false"
+                                        android:text="Earn prize from this offer."
+                                        android:textColor="@color/md_theme_onPrimary"
+                                        android:textSize="12sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textView7"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView5"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                                    <TextView
+                                        android:id="@+id/textView7"
+                                        android:layout_width="0dp"
+                                        android:layout_height="24dp"
+                                        android:background="@color/button_color"
+                                        android:drawableEnd="@drawable/right_arrow"
+                                        android:drawableTint="@android:color/black"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:gravity="center_vertical|end"
+                                        android:paddingEnd="16dp"
+                                        android:text="Check it out"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView33"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:text="Reward : "
+                                        android:visibility="gone"
+                                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                                    <TextView
+                                        android:id="@+id/textView74"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="4dp"
+                                        android:background="@drawable/circular_solid_bg"
+                                        android:backgroundTint="@color/button_color"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:padding="8dp"
+                                        android:paddingStart="16dp"
+                                        android:paddingEnd="16dp"
+                                        android:text="Earn upto \n1000+ prize"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="10sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textView7"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/playTimeCard"
+                                android:layout_width="0dp"
+                                android:layout_height="80dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:visibility="visible"
+                                app:cardCornerRadius="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/playtime_bg">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cardView4"
+                                        android:layout_width="38dp"
+                                        android:layout_height="38dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="8dp"
+                                        app:cardCornerRadius="8dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:id="@+id/imageViewL"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            app:srcCompat="@drawable/playtime_logo" />
+                                    </androidx.cardview.widget.CardView>
+
+
+                                    <TextView
+                                        android:id="@+id/tvplaytimetitle"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="16dp"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:text="Playtime Offerwall"
+                                        android:textColor="@color/md_theme_onPrimary"
+                                        app:layout_constraintEnd_toStartOf="@+id/tvEarnupto"
+                                        app:layout_constraintStart_toEndOf="@+id/cardView4"
+                                        app:layout_constraintTop_toTopOf="@+id/cardView4" />
+
+                                    <TextView
+                                        android:id="@+id/textViewpTdesc"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:alpha="0.7"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:singleLine="false"
+                                        android:text="Earn coins by completing tasks."
+                                        android:textColor="@color/md_theme_onPrimary"
+                                        android:textSize="12sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/tvcheckout"
+                                        app:layout_constraintEnd_toEndOf="@+id/tvplaytimetitle"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/tvplaytimetitle"
+                                        app:layout_constraintTop_toBottomOf="@+id/tvplaytimetitle" />
+
+                                    <TextView
+                                        android:id="@+id/tvcheckout"
+                                        android:layout_width="0dp"
+                                        android:layout_height="24dp"
+                                        android:background="#C069D7"
+                                        android:drawableEnd="@drawable/right_arrow"
+                                        android:drawableTint="@android:color/black"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:gravity="center_vertical|end"
+                                        android:paddingEnd="16dp"
+                                        android:text="Check it out"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+                                    <TextView
+                                        android:id="@+id/tvEarnupto"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="4dp"
+                                        android:background="@drawable/circular_solid_bg"
+                                        android:backgroundTint="#5E2CEC"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:padding="8dp"
+                                        android:paddingStart="16dp"
+                                        android:paddingEnd="16dp"
+                                        android:text="Earn upto \n1000+ prize"
+                                        android:textColor="@color/whiteOnly"
+                                        android:textSize="10sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/tvcheckout"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:layout_constraintEnd_toEndOf="@+id/pubCard"
+                                app:layout_constraintStart_toStartOf="@+id/pubCard"
+                                app:layout_constraintTop_toBottomOf="@+id/pubCard">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/high_coin_gradient">
+
+                                    <TextView
+                                        android:id="@+id/textView2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:includeFontPadding="false"
+                                        android:text="High Coins Offers"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                        android:textColor="@color/md_theme_onPrimary"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                                    <TextView
+                                        android:id="@+id/textView3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Convert every minute into UNLIMITED prize!"
+                                        android:textColor="@color/md_theme_onPrimary"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                                    <com.google.android.material.button.MaterialButton
+                                        android:id="@+id/highCoins"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:backgroundTint="@color/button_color"
+                                        android:paddingLeft="32dp"
+                                        android:paddingRight="32dp"
+                                        android:text="10000 Coins"
+                                        android:textColor="@android:color/black"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                                    <TextView
+                                        android:id="@+id/textView4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="-16dp"
+                                        android:layout_marginTop="4dp"
+                                        android:background="@drawable/blue_round_corner"
+                                        android:backgroundTint="#76FF03"
+                                        android:paddingStart="24dp"
+                                        android:paddingEnd="16dp"
+                                        android:text="Grab Now!"
+                                        android:textColor="@android:color/black"
+                                        android:textStyle="bold"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/adNetCard"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:foregroundGravity="clip_horizontal"
+                                android:visibility="gone"
+                                app:cardCornerRadius="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/rewards_drawable"
+                                    android:padding="4dp">
+
+                                    <ImageView
+                                        android:id="@+id/adNetImg"
+                                        android:layout_width="82dp"
+                                        android:layout_height="82dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginEnd="16dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:srcCompat="@drawable/money_daily" />
+
+                                    <TextView
+                                        android:id="@+id/adNetName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:layout_marginStart="16dp"
+                                        android:fontFamily="@font/alatsi_regular"
+                                        android:singleLine="true"
+                                        android:text="Daily Coins"
+                                        android:textSize="34sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toStartOf="@+id/adNetImg"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/adNetImg" />
+
+                                    <Button
+                                        android:id="@+id/dailyCoinBtn"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="16dp"
+                                        android:backgroundTint="@color/button_color"
+                                        android:enabled="false"
+                                        android:text="Claim"
+                                        android:textColor="@android:color/black"
+                                        android:visibility="visible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.0"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/adNetImg" />
+
+                                    <TextView
+                                        android:id="@+id/textView24"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Visit daily to get free coins"
+                                        app:layout_constraintBottom_toBottomOf="@+id/adNetImg"
+                                        app:layout_constraintEnd_toEndOf="@+id/adNetName"
+                                        app:layout_constraintStart_toStartOf="@+id/adNetName"
+                                        app:layout_constraintTop_toBottomOf="@+id/adNetName" />
+
+                                    <ProgressBar
+                                        android:id="@+id/dailyCoinProgressbar"
+                                        style="?android:attr/progressBarStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="@+id/dailyCoinBtn"
+                                        app:layout_constraintEnd_toEndOf="@+id/dailyCoinBtn"
+                                        app:layout_constraintStart_toStartOf="@+id/dailyCoinBtn"
+                                        app:layout_constraintTop_toTopOf="@+id/dailyCoinBtn"
+                                        app:layout_constraintVertical_bias="0.0" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/adNetRv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:layout_constraintEnd_toEndOf="@+id/pubCard"
+                                app:layout_constraintStart_toStartOf="@+id/pubCard"
+                                app:layout_constraintTop_toBottomOf="@+id/adNetCard"
+                                app:spanCount="2"
+                                tools:itemCount="2"
+                                tools:listitem="@layout/ad_net_rv_item" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/watchVidRv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:layout_constraintEnd_toEndOf="@+id/adNetRv"
+                                app:layout_constraintStart_toStartOf="@+id/adNetRv"
+                                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                                app:spanCount="2"
+                                tools:itemCount="2"
+                                tools:listitem="@layout/watch_vid_rv_item" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/alatsi_regular"
+                                android:text="Earn Coins"
+                                android:textSize="24sp"
+                                app:layout_constraintStart_toStartOf="@+id/pubCard"
+                                app:layout_constraintTop_toBottomOf="@id/vouLlayout" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/alatsi_regular"
+                                android:text="Watch &amp; Earn"
+                                android:textSize="24sp"
+                                app:layout_constraintStart_toStartOf="@+id/pubCard"
+                                app:layout_constraintTop_toBottomOf="@+id/adNetRv"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/alatsi_regular"
+                                android:text="Buy Coins"
+                                android:textSize="24sp"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="@+id/pubCard"
+                                app:layout_constraintTop_toBottomOf="@+id/watchVidRv" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/buyCoinRv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                                app:layout_constraintStart_toStartOf="@+id/cardView"
+                                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                                tools:itemCount="2"
+                                tools:listitem="@layout/buy_coin_item" />
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/voucherTxt"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginStart="16dp"-->
+                            <!--                        android:layout_marginTop="16dp"-->
+                            <!--                        android:text="Vouchers"-->
+                            <!--                        android:textColor="@color/black"-->
+                            <!--                        android:textSize="16sp"-->
+                            <!--                        android:textStyle="bold"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/pubCard" />-->
+
+                            <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+                            <!--                        android:id="@+id/voucherLayout"-->
+                            <!--                        android:layout_width="0dp"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginTop="16dp"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintHorizontal_bias="0.0"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/voucherTxt">-->
+
+                            <!--                        <com.cooltechworks.views.shimmer.ShimmerRecyclerView-->
+                            <!--                            android:id="@+id/voucherMainRv"-->
+                            <!--                            android:layout_width="0dp"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                            app:layout_constraintHorizontal_bias="0.0"-->
+                            <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                            <!--                            app:shimmer_demo_child_count="5"-->
+                            <!--                            app:shimmer_demo_layout="@layout/voucher_main_rv_item_shimmer"-->
+                            <!--                            app:shimmer_demo_layout_manager_type="linear_horizontal"-->
+                            <!--                            tools:itemCount="1"-->
+                            <!--                            tools:listitem="@layout/voucher_main_rv_item" />-->
+
+                            <!--                        <TextView-->
+                            <!--                            android:id="@+id/emptyTxtVoucher"-->
+                            <!--                            android:layout_width="wrap_content"-->
+                            <!--                            android:layout_height="100dp"-->
+                            <!--                            android:alpha="0.6"-->
+                            <!--                            android:fontFamily="@font/montserrat"-->
+                            <!--                            android:gravity="center"-->
+                            <!--                            android:text="No vouchers available yet."-->
+                            <!--                            android:visibility="gone"-->
+                            <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                            <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                            app:layout_constraintTop_toBottomOf="@+id/voucherMainRv" />-->
+
+                            <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/productTxt"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginTop="24dp"-->
+                            <!--                        android:fontFamily="@font/montserrat_bold"-->
+                            <!--                        android:text="Products"-->
+                            <!--                        android:textColor="@color/black"-->
+                            <!--                        android:textSize="16sp"-->
+                            <!--                        android:textStyle="bold"-->
+                            <!--                        app:layout_constraintStart_toStartOf="@+id/voucherTxt"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/voucherLayout" />-->
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/viewAllProduct"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginEnd="8dp"-->
+                            <!--                        android:background="@drawable/selected_round_corner_bg"-->
+                            <!--                        android:clickable="true"-->
+                            <!--                        android:drawableRight="@drawable/right_arrow"-->
+                            <!--                        android:gravity="center"-->
+                            <!--                        android:padding="8dp"-->
+
+                            <!--                        android:text="View all"-->
+                            <!--                        android:textColor="@color/primaryColor"-->
+                            <!--                        android:textSize="12sp"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="@+id/productTxt"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="@+id/productTxt" />-->
+
+                            <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+                            <!--                        android:id="@+id/productLayout"-->
+                            <!--                        android:layout_width="0dp"-->
+                            <!--                        android:layout_height="wrap_content"-->
+
+                            <!--                        android:layout_marginTop="16dp"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintHorizontal_bias="0.5"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/productTxt">-->
+
+                            <!--                        <com.cooltechworks.views.shimmer.ShimmerRecyclerView-->
+                            <!--                            android:id="@+id/trendingRv"-->
+                            <!--                            android:layout_width="0dp"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:visibility="visible"-->
+                            <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                            <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                            app:layout_constraintTop_toTopOf="parent"-->
+                            <!--                            app:shimmer_demo_child_count="5"-->
+                            <!--                            app:shimmer_demo_layout="@layout/trending_rv_item_shimmer"-->
+                            <!--                            app:shimmer_demo_layout_manager_type="linear_horizontal"-->
+                            <!--                            tools:itemCount="1"-->
+                            <!--                            tools:listitem="@layout/trending_rv_item" />-->
+
+                            <!--                        <TextView-->
+                            <!--                            android:id="@+id/emptyTxtProduct"-->
+                            <!--                            android:layout_width="wrap_content"-->
+                            <!--                            android:layout_height="100dp"-->
+                            <!--                            android:alpha="0.6"-->
+                            <!--                            android:fontFamily="@font/montserrat"-->
+                            <!--                            android:gravity="center"-->
+                            <!--                            android:text="No products available yet."-->
+                            <!--                            android:visibility="gone"-->
+                            <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                            <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                            app:layout_constraintTop_toBottomOf="@+id/trendingRv" />-->
+
+                            <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/viewAllVoucher"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:background="@drawable/selected_round_corner_bg"-->
+                            <!--                        android:clickable="true"-->
+                            <!--                        android:drawableRight="@drawable/right_arrow"-->
+                            <!--                        android:gravity="center"-->
+                            <!--                        android:padding="8dp"-->
+                            <!--                        android:text="View all"-->
+                            <!--                        android:textColor="@color/primaryColor"-->
+                            <!--                        android:textSize="12sp"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="@+id/voucherTxt"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="@+id/viewAllProduct"-->
+                            <!--                        app:layout_constraintTop_toTopOf="@+id/voucherTxt" />-->
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/textView11"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginTop="16dp"-->
+                            <!--                        android:fontFamily="@font/montserrat_bold"-->
+                            <!--                        android:orientation="horizontal"-->
+                            <!--                        android:text="The Winners"-->
+                            <!--                        android:textColor="@color/black"-->
+                            <!--                        android:textSize="16sp"-->
+                            <!--                        android:textStyle="bold"-->
+                            <!--                        app:layout_constraintStart_toStartOf="@+id/productTxt"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/productLayout" />-->
+
+                            <!--                    <RadioGroup-->
+                            <!--                        android:id="@+id/winRadioGroup"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginTop="8dp"-->
+                            <!--                        android:checkedButton="@id/voucherRadio"-->
+                            <!--                        android:fontFamily="@font/montserrat"-->
+                            <!--                        android:orientation="horizontal"-->
+                            <!--                        android:text="The Winners"-->
+                            <!--                        android:textColor="@color/primaryColor"-->
+                            <!--                        android:textSize="16sp"-->
+                            <!--                        android:textStyle="bold"-->
+                            <!--                        app:layout_constraintStart_toStartOf="@+id/textView11"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/textView11">-->
+
+                            <!--                        <RadioButton-->
+                            <!--                            android:id="@+id/voucherRadio"-->
+                            <!--                            android:layout_width="wrap_content"-->
+                            <!--                            android:layout_height="36dp"-->
+
+                            <!--                            android:background="@drawable/win_radio_btn_selector"-->
+                            <!--                            android:button="@android:color/transparent"-->
+
+                            <!--                            android:fontFamily="@font/montserrat_bold"-->
+                            <!--                            android:padding="8dp"-->
+                            <!--                            android:text="Vouchers"-->
+                            <!--                            android:textColor="@drawable/win_radio_btn_text_color"-->
+                            <!--                            android:textSize="12sp"-->
+                            <!--                            android:textStyle="normal" />-->
+
+                            <!--                        <RadioButton-->
+                            <!--                            android:id="@+id/productRadio"-->
+                            <!--                            android:layout_width="wrap_content"-->
+                            <!--                            android:layout_height="36dp"-->
+                            <!--                            android:layout_marginStart="16dp"-->
+                            <!--                            android:background="@drawable/win_radio_btn_selector"-->
+                            <!--                            android:button="@android:color/transparent"-->
+                            <!--                            android:fontFamily="@font/montserrat_bold"-->
+                            <!--                            android:padding="8dp"-->
+                            <!--                            android:text="Products"-->
+                            <!--                            android:textColor="@drawable/win_radio_btn_text_color"-->
+                            <!--                            android:textSize="12dp" />-->
+
+
+                            <!--                    </RadioGroup>-->
+
+                            <!--                    <androidx.recyclerview.widget.RecyclerView-->
+                            <!--                        android:id="@+id/winnerRv"-->
+                            <!--                        android:layout_width="0dp"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginTop="16dp"-->
+                            <!--                        android:visibility="visible"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintHorizontal_bias="0.5"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/winRadioGroup"-->
+                            <!--                        tools:itemCount="1"-->
+                            <!--                        tools:listitem="@layout/winner_rv_item">-->
+
+                            <!--                    </androidx.recyclerview.widget.RecyclerView>-->
+
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/emptyTxtWinner"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="100dp"-->
+                            <!--                        android:layout_marginTop="16dp"-->
+                            <!--                        android:alpha="0.6"-->
+                            <!--                        android:fontFamily="@font/montserrat"-->
+                            <!--                        android:text="No winners available yet."-->
+                            <!--                        android:visibility="gone"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintHorizontal_bias="0.5"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="@+id/winnerRv" />-->
+
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/viewAllWinner"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginEnd="8dp"-->
+                            <!--                        android:background="@drawable/selected_round_corner_bg"-->
+                            <!--                        android:clickable="true"-->
+                            <!--                        android:drawableRight="@drawable/right_arrow"-->
+                            <!--                        android:gravity="center"-->
+                            <!--                        android:padding="8dp"-->
+                            <!--                        android:text="View all"-->
+
+                            <!--                        android:textColor="@color/primaryColor"-->
+                            <!--                        android:textSize="12sp"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="@+id/textView11"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="@+id/textView11" />-->
+
+                            <!--                    <ProgressBar-->
+                            <!--                        android:id="@+id/winProgressBar"-->
+                            <!--                        style="?android:attr/progressBarStyle"-->
+                            <!--                        android:layout_width="wrap_content"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:layout_marginTop="32dp"-->
+                            <!--                        android:visibility="gone"-->
+                            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toTopOf="@+id/winnerRv" />-->
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+
+                </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+                <!--        <FrameLayout-->
+                <!--            android:id="@+id/frameLayout"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="match_parent"-->
+                <!--            android:background="@color/white"-->
+                <!--            android:visibility="gone"-->
+                <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintHorizontal_bias="0.5"-->
+                <!--            app:layout_constraintStart_toStartOf="parent"-->
+                <!--            app:layout_constraintTop_toTopOf="parent"-->
+                <!--            app:layout_constraintVertical_bias="0.5">-->
+
+                <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="match_parent">-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/errorImg"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_margin="16dp"-->
+                <!--                    android:layout_marginStart="32dp"-->
+                <!--                    android:layout_marginEnd="32dp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintHorizontal_bias="0.5"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent"-->
+                <!--                    app:srcCompat="@drawable/error_img" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/message"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:text="Something went wrong"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/errorImg"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/errorImg"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/errorImg" />-->
+
+                <!--                <ProgressBar-->
+                <!--                    android:id="@+id/progressBar3"-->
+                <!--                    style="?android:attr/progressBarStyle"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/errorImg"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/errorImg"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/errorImg" />-->
+                <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <!--        </FrameLayout>-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

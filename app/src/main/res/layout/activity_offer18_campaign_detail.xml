@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Activities.Offer18CampaignDetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/campaignDetailProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/campaignDetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/posterImg"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/adPosterImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/placeholder" />
+            </androidx.cardview.widget.CardView>
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/adIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/posterImg"
+                app:shapeAppearanceOverlay="@style/roundCornerImageview" />
+
+            <TextView
+                android:id="@+id/adTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:minLines="2"
+                android:paddingTop="4dp"
+                android:singleLine="false"
+                android:text="Advertisement Title"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/adRewardCoin"
+                app:layout_constraintStart_toEndOf="@+id/adIcon"
+                app:layout_constraintTop_toTopOf="@+id/adIcon" />
+
+            <TextView
+                android:id="@+id/adRewardCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableStart="@drawable/coins_18dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:text="78"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/adTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/adClaimBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:text="Claim Now"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="#292727"
+                android:textStyle="normal"
+                app:backgroundTint="@color/orangeDark"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/refCodeInputLayout" />
+
+            <TextView
+                android:id="@+id/adDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/alatsi_regular"
+                android:singleLine="false"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adTitle" />
+
+<!--            Refer Code Field-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/refCodeInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Influencer Refer Code (Optional)"
+
+                app:boxCornerRadiusBottomEnd="18dp"
+                app:boxCornerRadiusBottomStart="18dp"
+                app:boxCornerRadiusTopEnd="18dp"
+                app:boxCornerRadiusTopStart="18dp"
+
+                app:boxStrokeColor="@color/md_theme_primary"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/md_theme_primary"
+                app:hintTextColor="@color/md_theme_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adDesc">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:inputType="textPersonName" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/termsNcondition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/adDesc"
+                app:layout_constraintTop_toBottomOf="@+id/textView79" />
+
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Task(s) Completed:"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/adDesc"
+                app:layout_constraintTop_toBottomOf="@+id/adClaimBtn" />
+
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coins Earned:"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/adDesc"
+                app:layout_constraintTop_toBottomOf="@+id/textView75" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:drawableLeft="@drawable/coins_14dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:text="12"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/textView76"
+                app:layout_constraintStart_toEndOf="@+id/textView76"
+                app:layout_constraintTop_toTopOf="@+id/textView76" />
+
+            <TextView
+                android:id="@+id/tasksCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:text="0/11"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/textView75"
+                app:layout_constraintStart_toEndOf="@+id/textView75"
+                app:layout_constraintTop_toTopOf="@+id/textView75" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/linearProgressIndicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:indeterminate="false"
+                android:progress="50"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView77"
+                app:trackCornerRadius="16dp" />
+
+            <TextView
+                android:id="@+id/textView79"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:text="Terms &amp; Conditions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toEndOf="@+id/linearProgressIndicator"
+                app:layout_constraintStart_toStartOf="@+id/linearProgressIndicator"
+                app:layout_constraintTop_toBottomOf="@+id/linearProgressIndicator" />
+
+            <TextView
+                android:id="@+id/textView78"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:text="Task Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:layout_constraintEnd_toEndOf="@+id/linearProgressIndicator"
+                app:layout_constraintStart_toStartOf="@+id/linearProgressIndicator"
+                app:layout_constraintTop_toBottomOf="@+id/termsNcondition"
+                tools:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView78">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/offer18TaskRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="56dp"
+                    tools:listitem="@layout/offer18_task_rv_item"
+                    tools:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/helpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_curved_primary_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/alatsi_regular"
+                android:paddingStart="24dp"
+                android:paddingTop="4dp"
+
+                android:paddingEnd="24dp"
+                android:paddingBottom="4dp"
+                android:text="Help"
+                android:textColor="@color/md_theme_primary"
+                app:layout_constraintEnd_toEndOf="@+id/adClaimBtn"
+                app:layout_constraintTop_toTopOf="@+id/textView75" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/emptyCampaignDetailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alatsi_regular"
+            android:text="Something went wrong!"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

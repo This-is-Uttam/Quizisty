@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quizisty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="refer_earn_txt">Hey! Guess what? I just got free Product And Voucher from Reward Cycle! You can too! Sign up now and get 10–100 Coins as a bonus. Plus, you can also earn free Product and grab awesome gift cards instantly. Start using Reward Cycle today… Use my referral code, Download the app and get a chance to win exciting prizes like Smartphone, Smartwatch,Gift Vouchers etc></string>
+    <string name="refer_note">You will receive Rewards only if the person you referred completes one task from High-Coins section.</string>
+    <string name="app_version">App Version: 2.1.0</string>
+    <string name="loginTitle">@string/app_name </string>
+
+</resources>

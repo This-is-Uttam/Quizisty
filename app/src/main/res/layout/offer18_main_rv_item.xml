@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/campaignCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="16dp"
+        app:cardCornerRadius="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="8dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/img_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="@dimen/dim_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/adPosterImg"
+                    android:layout_width="@dimen/dim_100"
+                    android:layout_height="@dimen/dim_100"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/adTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:singleLine="true"
+                android:text="Advertisement Title"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/adRewardCoin"
+                app:layout_constraintStart_toEndOf="@+id/img_card"
+                app:layout_constraintTop_toTopOf="@+id/img_card" />
+
+            <TextView
+                android:id="@+id/adRewardCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableStart="@drawable/coins_18dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/alatsi_regular"
+                android:text="12"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/adTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/adTitle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/adClaimBtn"
+                style="@style/AppButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Claim Now"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/md_theme_onPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_card"
+                app:layout_constraintTop_toBottomOf="@+id/adDesc" />
+
+            <TextView
+                android:id="@+id/adDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:singleLine="true"
+                android:text="Advertisement description here"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/adTitle"
+                app:layout_constraintTop_toBottomOf="@+id/adTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

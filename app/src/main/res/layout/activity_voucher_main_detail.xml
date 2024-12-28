@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/vouMainImg"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/amazon" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vouMainImg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/buy_btn_design"
+                        android:backgroundTint="#4d4ab8b5"
+                        android:padding="4dp"
+                        app:layout_constraintEnd_toStartOf="@+id/progressBar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/vouBidOver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/blue_round_corner"
+                            android:backgroundTint="@color/primaryVariantColor"
+                            android:padding="2dp"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="Winner Announced, Offer is over"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textStyle="normal|bold|italic"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/vouMrp"
+                            app:layout_constraintStart_toStartOf="@+id/vouBidNow"
+                            app:layout_constraintTop_toBottomOf="@+id/vouPricePerSpot" />
+
+                        <TextView
+                            android:id="@+id/vouBidNow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/button_bg"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:fontFamily="@font/alatsi_regular"
+                            android:gravity="center_horizontal"
+                            android:padding="8dp"
+                            android:paddingStart="24dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="24dp"
+                            android:paddingBottom="4dp"
+                            android:text="Buy Now"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="@+id/imageView22"
+                            app:layout_constraintTop_toBottomOf="@+id/vouPricePerSpot" />
+
+                        <TextView
+                            android:id="@+id/textView72"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/alatsi_regular"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:text="Wizard Rewards Price"
+                            android:textColor="@color/primaryVariantColor"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+                        <TextView
+                            android:id="@+id/textView71"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="@font/alatsi_regular"
+                            android:text="Buy it for a discounted price"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MRP  ₹"
+                            android:textColor="@color/subtext_color"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/vouPricePerSpot"
+                            app:layout_constraintEnd_toStartOf="@+id/vouMrp"
+                            app:layout_constraintTop_toTopOf="@+id/vouPricePerSpot" />
+
+                        <TextView
+                            android:id="@+id/vouMrp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:maxLength="8"
+                            android:singleLine="true"
+                            android:text="1000000000000"
+                            android:textColor="@color/subtext_color"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+                        <TextView
+                            android:id="@+id/vouPricePerSpot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/alatsi_regular"
+                            android:text="3999/spot"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/imageView22"
+                            app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                        <ImageView
+                            android:id="@+id/imageView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="@+id/vouPricePerSpot"
+                            app:layout_constraintStart_toStartOf="@+id/textView72"
+                            app:layout_constraintTop_toTopOf="@+id/vouPricePerSpot"
+                            app:srcCompat="@drawable/coins_18dp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="56dp"
+                        android:layout_height="59dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circular_white"
+                        android:indeterminateOnly="false"
+                        android:progress="70"
+                        android:progressDrawable="@drawable/progress_drawable"
+                        android:rotation="-90"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/spotLeftText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:autoSizeTextType="uniform"
+                        android:text="100"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                        app:layout_constraintStart_toStartOf="@+id/progressBar"
+                        app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Left"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/spotLeftText"
+                        app:layout_constraintStart_toStartOf="@+id/spotLeftText"
+                        app:layout_constraintTop_toBottomOf="@+id/spotLeftText" />
+
+                    <TextView
+                        android:id="@+id/totalSpotText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="out of 100"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                        app:layout_constraintStart_toStartOf="@+id/progressBar"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+                    <TextView
+                        android:id="@+id/itemName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/alatsi_regular"
+                        android:text="Noise Pulse Go Buzz Smart Watch "
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout9"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/alatsi_regular"
+                        android:text="Voucher Details"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/itemName"
+                        app:layout_constraintTop_toBottomOf="@+id/shortDescription" />
+
+                    <TextView
+                        android:id="@+id/longDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:inputType="textMultiLine"
+                        android:text="Long description"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/alatsi_regular"
+                        android:text="Short Description"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/itemName"
+                        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+                    <TextView
+                        android:id="@+id/shortDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Short description"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/errorImg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/error_img" />
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Something went wrong"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/errorImg"
+                    app:layout_constraintStart_toStartOf="@+id/errorImg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/TertiaryColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/errorImg"
+                    app:layout_constraintStart_toStartOf="@+id/errorImg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

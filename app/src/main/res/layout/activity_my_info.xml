@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.reward.quizisty.Activities.MyInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/myInfoToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/arrow_left_24"
+            app:navigationIconTint="@color/black"
+            app:title="My Information" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/myInfoLayou"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:hint="Enter Address"
+                app:boxCornerRadiusBottomEnd="18dp"
+                app:boxCornerRadiusBottomStart="18dp"
+                app:boxCornerRadiusTopEnd="18dp"
+                app:boxCornerRadiusTopStart="18dp"
+                app:boxStrokeColor="@color/md_theme_primary"
+                app:boxStrokeWidthFocused="1dp"
+                app:counterEnabled="false"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/md_theme_primary"
+                app:hintTextColor="@color/md_theme_primary"
+                app:layout_constraintEnd_toEndOf="@+id/phoneInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/phoneInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/phoneInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alatsi_regular"
+
+                    android:inputType="textMultiLine|textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dobTexInpLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:hint="Select Date of Birth"
+                app:boxCornerRadiusBottomEnd="18dp"
+                app:boxCornerRadiusBottomStart="18dp"
+                app:boxCornerRadiusTopEnd="18dp"
+                app:boxCornerRadiusTopStart="18dp"
+                app:boxStrokeColor="@color/md_theme_primary"
+
+                app:boxStrokeWidthFocused="1dp"
+                app:counterEnabled="false"
+                app:endIconDrawable="@drawable/date_icon"
+                app:endIconMode="custom"
+                app:endIconTint="@color/md_theme_primary"
+                app:hintTextColor="@color/md_theme_primary"
+                app:layout_constraintEnd_toEndOf="@+id/nameInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/nameInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/nameInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dobEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:inputType="date|none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Enter Full Name"
+                app:boxCornerRadiusBottomEnd="18dp"
+                app:boxCornerRadiusBottomStart="18dp"
+                app:boxCornerRadiusTopEnd="18dp"
+
+                app:boxCornerRadiusTopStart="18dp"
+                app:boxStrokeColor="@color/md_theme_primary"
+
+                app:boxStrokeWidthFocused="1dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/md_theme_primary"
+                app:hintTextColor="@color/md_theme_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alatsi_regular"
+                    android:inputType="textPersonName|textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:hint="Enter Phone Number"
+                app:boxCornerRadiusBottomEnd="18dp"
+                app:boxCornerRadiusBottomStart="18dp"
+                app:boxCornerRadiusTopEnd="18dp"
+                app:boxCornerRadiusTopStart="18dp"
+                app:boxStrokeColor="@color/md_theme_primary"
+                app:boxStrokeWidthFocused="1dp"
+                app:counterEnabled="false"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/md_theme_primary"
+                app:hintTextColor="@color/md_theme_primary"
+                app:layout_constraintEnd_toEndOf="@+id/nameInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/nameInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/alatsi_regular"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pincodeInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="8dp"
+                android:hint="Enter Pincode"
+                app:boxCornerRadiusBottomEnd="18dp"
+                app:boxCornerRadiusBottomStart="18dp"
+                app:boxCornerRadiusTopEnd="18dp"
+                app:boxCornerRadiusTopStart="18dp"
+                app:boxStrokeColor="@color/md_theme_primary"
+                app:boxStrokeWidthFocused="1dp"
+                app:counterEnabled="false"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/md_theme_primary"
+                app:hintTextColor="@color/md_theme_primary"
+                app:layout_constraintEnd_toEndOf="@+id/phoneInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/phoneInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/addInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alatsi_regular"
+
+                    android:inputType="number|numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/nameInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/dobTexInpLayout">
+
+                <RadioButton
+                    android:id="@+id/maleRadio"
+                    android:layout_width="80dp"
+                    android:layout_height="42dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/radio_btn_selector"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Male"
+                    android:textColor="@drawable/radio_btn_text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/femaleRadio"
+                    android:layout_width="80dp"
+                    android:layout_height="42dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/radio_btn_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:saveEnabled="true"
+                    android:text="Female"
+
+                    android:textColor="@drawable/radio_btn_text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/othersRadio"
+                    android:layout_width="80dp"
+                    android:layout_height="42dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/radio_btn_selector"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="Others"
+
+                    android:textColor="@drawable/radio_btn_text_color"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="false"
+                android:elevation="4dp"
+                android:enabled="false"
+                android:fontFamily="@font/alatsi_regular"
+                android:gravity="center"
+                android:onClick="updateMyInfo"
+                android:padding="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/nameInputLayout"
+                app:layout_constraintStart_toStartOf="@+id/nameInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/pincodeInputLayout" />
+
+            <ProgressBar
+                android:id="@+id/myInfoProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/md_theme_primary"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/submitButton"
+                app:layout_constraintStart_toStartOf="@+id/submitButton"
+                app:layout_constraintTop_toTopOf="@+id/submitButton" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>

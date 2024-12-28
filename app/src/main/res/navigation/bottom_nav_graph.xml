@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/coinFragment">
+
+    <fragment
+        android:id="@+id/coinFragment"
+        android:name="com.reward.quizisty.Coins.CoinFragment"
+        android:label="fragment_coin"
+        tools:layout="@layout/fragment_coin" />
+    <fragment
+        android:id="@+id/highCoinsFragment"
+        android:name="com.reward.quizisty.Fragments.HighCoinsFragment"
+        android:label="fragment_high_coins"
+        tools:layout="@layout/fragment_high_coins" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.reward.quizisty.Fragments.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/redeemFragment"
+        android:name="com.reward.quizisty.Fragments.RedeemFragment"
+        android:label="fragment_redeem"
+        tools:layout="@layout/fragment_redeem" />
+    <fragment
+        android:id="@+id/referFragment"
+        android:name="com.reward.quizisty.Fragments.ReferFragment"
+        android:label="fragment_refer"
+        tools:layout="@layout/fragment_refer" />
+</navigation>

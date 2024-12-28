@@ -1,0 +1,166 @@
+{
+  "project_info": {
+    "project_number": "68217820602",
+    "project_id": "reward-rover-8e8e4",
+    "storage_bucket": "reward-rover-8e8e4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68217820602:android:20b565a2e92f5d9f13b983",
+        "android_client_info": {
+          "package_name": "com.app.rewardcycle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68217820602-kjmkkeje6eqme9ao1doss0l62gf7fhkh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.rewardcycle",
+            "certificate_hash": "a640b01df860fe4b52ca8a4cd1fac597ca275860"
+          }
+        },
+        {
+          "client_id": "68217820602-lgglattasd7mt84itt3vm0nshc3tumnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.rewardcycle",
+            "certificate_hash": "a378443e1213d6223c5efa6dfef95a87a5fff6c6"
+          }
+        },
+        {
+          "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC14POa3UNucMhy1m2fAgI9wYVq0BGx_U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68217820602:android:b2429c0e3643bd3c13b983",
+        "android_client_info": {
+          "package_name": "com.example.quiz_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC14POa3UNucMhy1m2fAgI9wYVq0BGx_U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68217820602:android:bcc2cf91fc653df013b983",
+        "android_client_info": {
+          "package_name": "com.reward.quizisty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68217820602-bh4d5fuu4jgbh2k22e3ofq39jt59llep.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reward.quizisty",
+            "certificate_hash": "a640b01df860fe4b52ca8a4cd1fac597ca275860"
+          }
+        },
+        {
+          "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC14POa3UNucMhy1m2fAgI9wYVq0BGx_U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68217820602:android:8b18aed31271924b13b983",
+        "android_client_info": {
+          "package_name": "com.reward.rewardrover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68217820602-5oe53lq8k2va9fl46aeeibtuvl0rk6g4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reward.rewardrover",
+            "certificate_hash": "d578ae631c228bfbfb0eb5cf4a808445c76561ea"
+          }
+        },
+        {
+          "client_id": "68217820602-6l6rmrimr5tnnb9vc2gtlm3tgae30c5o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reward.rewardrover",
+            "certificate_hash": "a640b01df860fe4b52ca8a4cd1fac597ca275860"
+          }
+        },
+        {
+          "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC14POa3UNucMhy1m2fAgI9wYVq0BGx_U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68217820602-nbu1d5gi12im0mn6sj5vdu9ga4domfh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

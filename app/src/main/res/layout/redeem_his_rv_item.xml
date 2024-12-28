@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/bid_his_item_color"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Given Detail: "
+                app:layout_constraintStart_toStartOf="@+id/redHisImg"
+                app:layout_constraintTop_toBottomOf="@+id/redHisImg" />
+
+            <TextView
+                android:id="@+id/redHisName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:maxLines="2"
+                android:singleLine="true"
+                android:text="Amazon Voucher"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/redHisPrice"
+                app:layout_constraintStart_toEndOf="@+id/redHisImg"
+                app:layout_constraintTop_toTopOf="@+id/redHisImg" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Used Coins: "
+                app:layout_constraintStart_toStartOf="@+id/redHisName"
+                app:layout_constraintTop_toBottomOf="@+id/redHisName" />
+
+            <TextView
+                android:id="@+id/redHisCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/coins_18dp"
+                android:drawablePadding="4dp"
+                android:gravity="end"
+                android:text="505"
+                android:textColor="@color/orangeDark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView27"
+                app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+            <TextView
+                android:id="@+id/redHisPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="₹10000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/redHisName" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Redeem Date and Time: "
+                app:layout_constraintStart_toStartOf="@+id/redHisImg"
+                app:layout_constraintTop_toBottomOf="@+id/redHisGivenDetail" />
+
+            <TextView
+                android:id="@+id/redHisDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Jul 2023 05:20 AM"
+                app:layout_constraintBottom_toBottomOf="@+id/textView43"
+                app:layout_constraintEnd_toEndOf="@+id/redHisGivenDetail"
+                app:layout_constraintTop_toTopOf="@+id/textView43" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Redeem Status: "
+                app:layout_constraintStart_toStartOf="@+id/textView43"
+                app:layout_constraintTop_toBottomOf="@+id/redHisDate" />
+
+            <TextView
+                android:id="@+id/redHisStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                android:textColor="@color/completedColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView59"
+                app:layout_constraintEnd_toEndOf="@+id/redHisDate"
+                app:layout_constraintTop_toTopOf="@+id/textView59" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Response Time"
+                app:layout_constraintStart_toStartOf="@+id/textView59"
+                app:layout_constraintTop_toBottomOf="@+id/redHisStatus" />
+
+            <TextView
+                android:id="@+id/redHisResponseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not reacted yet"
+                app:layout_constraintBottom_toBottomOf="@+id/textView46"
+                app:layout_constraintEnd_toEndOf="@+id/redHisPrice"
+                app:layout_constraintTop_toTopOf="@+id/textView46" />
+
+            <ImageView
+                android:id="@+id/redHisImg"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/redHisGivenDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="abc@gmail.com"
+                android:textAlignment="textEnd"
+                app:layout_constraintEnd_toEndOf="@+id/redHisPrice"
+                app:layout_constraintStart_toEndOf="@+id/textView23"
+                app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/rCodeTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Code: "
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/textView46"
+                app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+            <TextView
+                android:id="@+id/redeemCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="end"
+                android:text="kajhdfka"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/copyRCode"
+                app:layout_constraintStart_toEndOf="@+id/rCodeTitle"
+                app:layout_constraintTop_toTopOf="@+id/rCodeTitle" />
+
+            <ImageView
+                android:id="@+id/copyRCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/redHisResponseTime"
+                app:layout_constraintTop_toTopOf="@+id/redeemCode"
+                app:srcCompat="@drawable/copy_clipboard" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
